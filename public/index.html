@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mineradio</title>
 <meta name="referrer" content="no-referrer">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@400;700;900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 <script src="vendor/three.r128.min.js"></script>
 <script src="vendor/music-tempo.min.js"></script>
 <script src="vendor/gsap.min.js"></script>
@@ -2124,6 +2124,7 @@ html.control-glass-svg-ok #visual-guide-btn:hover{
         <button type="button" data-font="gothic" onclick="setLyricFont('gothic')">Gothic</button>
         <button type="button" data-font="editorial" onclick="setLyricFont('editorial')">Editorial</button>
         <button type="button" data-font="humanist" onclick="setLyricFont('humanist')">Humanist</button>
+        <button type="button" data-font="round" onclick="setLyricFont('round')">圆体</button>
         <button type="button" data-font="mono" onclick="setLyricFont('mono')">等宽</button>
         <button type="button" data-font="display" onclick="setLyricFont('display')">标题</button>
       </div>
@@ -8578,9 +8579,9 @@ function makeLyricReadabilityTexture(mask) {
   ctx.restore();
 
   ctx.save();
-  ctx.filter = 'blur(1.2px)';
+  ctx.filter = 'blur(2.8px)';
   ctx.globalAlpha = 0.26;
-  ctx.lineWidth = Math.max(3.2, fontSize * 0.030);
+  ctx.lineWidth = Math.max(4.8, fontSize * 0.042);
   ctx.strokeStyle = 'rgba(255,255,255,1)';
   strokeLines(0, 0);
   ctx.restore();
@@ -8633,10 +8634,10 @@ function makeLyricGlowTexture(text, fontSize, textWidth, lines, lineHeight, fitS
     }
   }
   ctx.save();
-  ctx.filter = 'blur(14px)';
+  ctx.filter = 'blur(16px)';
   ctx.globalAlpha = 0.46;
   ctx.fillStyle = '#fff';
-  ctx.lineWidth = Math.max(10, fontSize * 0.10);
+  ctx.lineWidth = Math.max(12, fontSize * 0.12);
   ctx.strokeStyle = '#fff';
   drawGlowText(0, 0);
   ctx.restore();
@@ -8666,12 +8667,12 @@ function makeLyricGlowTexture(text, fontSize, textWidth, lines, lineHeight, fitS
   ctx.restore();
   ctx.save();
   ctx.globalCompositeOperation = 'lighter';
-  ctx.filter = 'blur(8px)';
+  ctx.filter = 'blur(12px)';
   ctx.globalAlpha = 0.26;
   ctx.fillStyle = '#fff';
   for (var ri = 0; ri < 8; ri++) {
     var ang = ri / 8 * Math.PI * 2;
-    drawGlowText(Math.cos(ang) * 7, Math.sin(ang) * 4);
+    drawGlowText(Math.cos(ang) * 8, Math.sin(ang) * 5);
   }
   ctx.restore();
   ctx.save();

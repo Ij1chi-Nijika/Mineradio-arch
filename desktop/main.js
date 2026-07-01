@@ -773,7 +773,7 @@ function rememberDesktopLyricsBounds() {
 function applyDesktopLyricsMouseBehavior() {
   if (!desktopLyricsWindow || desktopLyricsWindow.isDestroyed()) return;
   const locked = desktopLyricsState.clickThrough !== false;
-  const shouldIgnore = locked || !desktopLyricsPointerCapture;
+  const shouldIgnore = locked;
   if (desktopLyricsMouseIgnored === shouldIgnore) return;
   desktopLyricsMouseIgnored = shouldIgnore;
   desktopLyricsWindow.setIgnoreMouseEvents(shouldIgnore, { forward: true });
