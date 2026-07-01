@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mineradio Desktop Lyrics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@400;700;900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
     :root{
       --lyric-primary:#f6fdff;
@@ -66,7 +67,7 @@
       isolation:isolate;
       -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--lyric-mask-edge-width),#000 calc(100% - var(--lyric-mask-edge-width)),transparent 100%);
       mask-image:linear-gradient(90deg,transparent 0,#000 var(--lyric-mask-edge-width),#000 calc(100% - var(--lyric-mask-edge-width)),transparent 100%);
-      filter:drop-shadow(0 1px 2.4px rgba(4,6,12,.58)) drop-shadow(0 0 4.8px rgba(4,6,12,.30));
+      filter:drop-shadow(0 1px 4.2px rgba(4,6,12,.58)) drop-shadow(0 0 7.2px rgba(4,6,12,.30));
       transform:translateZ(0);
       will-change:transform,filter;
     }
@@ -99,9 +100,9 @@
       -webkit-background-clip:text;
       background-clip:text;
       -webkit-text-fill-color:transparent;
-      -webkit-text-stroke:.18px rgba(255,255,255,.72);
+      -webkit-text-stroke:.28px rgba(255,255,255,.72);
       paint-order:stroke fill;
-      text-shadow:0 0 1px rgba(255,255,255,.34),0 0 calc(6px + var(--lyric-css-beat-glow)) var(--lyric-shadow-soft),0 0 calc(14px + var(--lyric-css-beat-glow)) var(--lyric-shadow-glow);
+      text-shadow:0 0 calc(3px + var(--lyric-css-beat-glow)) var(--lyric-shadow-soft),0 0 calc(14px + var(--lyric-css-beat-glow)) var(--lyric-shadow-glow);
       filter:none;
       opacity:0;
       transform:translate3d(0,0,0);
